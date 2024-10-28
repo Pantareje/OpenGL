@@ -1,0 +1,13 @@
+#version 430 core
+
+#define ANGLE 2.09439510239319549231
+
+void main()
+{
+	if (gl_VertexID == 0)
+		gl_Position = vec4(sin(ANGLE * 0), cos(ANGLE * 0) - 0.25, 0.0, 1.0);
+	else if (gl_VertexID == 1)
+		gl_Position = vec4(sin(ANGLE * 1), cos(ANGLE * 1) - 0.25, 0.0, 1.0);
+	else
+		gl_Position = vec4(sin(ANGLE * 2), cos(ANGLE * 2) - 0.25, 0.0, 1.0);
+}
