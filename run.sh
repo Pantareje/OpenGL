@@ -19,7 +19,7 @@ fi
 
 if [ ! -d bin ]; then
 	mkdir "bin"
-	if [ $? != 0]; then
+	if [ $? != 0 ]; then
 		echo "No se pudo crear un directorio para la aplicación compilada." >&2
 		exit 1
 	fi
