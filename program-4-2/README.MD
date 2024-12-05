@@ -1,0 +1,3 @@
+## Programa 4.2
+
+Partiendo del programa anterior, eliminamos el bucle for y usamos instancias en la GPU para dibujar muchísimos cubos simultáneamente. Esto es mucho más eficaz que llamar varias veces a `glDrawArrays()`, ya que reduce una de las mayores limitaciones de rendimiento: la comunicación entre la CPU y la GPU. Ya que únicamente se realiza una llamada a `glDrawArraysInstanced`, la CPU queda libre para hacer otras tareas, mientras que la GPU ya sabe perfectamente lo que tiene que realizar con una única llamada a la función. En general, es recomendable evitar modificar grandes cantidades de datos a la hora de dibujar un fotograma, especialmente si se realizan accesos muy costosos a la memoria, como por ejemplo actualizar un búfer.

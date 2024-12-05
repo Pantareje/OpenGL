@@ -1,0 +1,8 @@
+#pragma once
+
+#define PI        3.1415926535897932f
+#define TWO_PI    6.2831853071795865f
+
+#define PI_DIV_4  0.7853981633974483f
+#define PI_DIV_3  1.0471975511965977f
+#define PI_DIV_2  1.5707963267948966f

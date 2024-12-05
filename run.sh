@@ -25,12 +25,12 @@ if [ ! -d bin ]; then
 	fi
 fi
 
-CFLAGS="-Wall -Werror -std=c11 -Iglad/include"
+CFLAGS="-Wall -Werror -std=c11 -Ilib/glad/include"
 LDFLAGS="-lm -lglfw"
 
 BIN_DIR=$(realpath "bin")
 
-if cc ${CFLAGS} -o "${BIN_DIR}/${NAME}" ${SOURCE_FILES} glad/src/glad.c ${LDFLAGS}; then
+if cc ${CFLAGS} -o "${BIN_DIR}/${NAME}" ${SOURCE_FILES} lib/glad/src/glad.c ${LDFLAGS}; then
 	if [ -d "${PROJECT}/data" ]; then
 		cd "${PROJECT}/data"
 	fi
